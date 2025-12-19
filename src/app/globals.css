@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+:root {
+  /* Base Colors */
+  --background: #050a14;
+  /* Deep Navy/Black */
+  --foreground: #f8fafc;
+  /* Slate 50 */
+
+  /* Brand Colors */
+  --color-viprobac: #00f0ff;
+  /* Electric Blue */
+  --color-viprogro: #00ff88;
+
+  /* Accents */
+  --color-accent-blue: #0077be;
+  --color-accent-gold: #b8860b;
+
+  /* UI Colors */
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-viprobac: var(--color-viprobac);
+  --color-viprogro: var(--color-viprogro);
+
+  --color-card: var(--card-bg);
+  --color-card-border: var(--card-border);
+
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-outfit);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Animations */
+@keyframes gradient {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 1;
+  }
+}
+
+@keyframes float-delayed {
+
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(-30px) translateX(-15px);
+    opacity: 0.9;
+  }
+}
+
+@keyframes float-slow {
+
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translateY(-15px) translateX(5px) scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulse-slow {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes pulse-slower {
+
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes spin-very-slow {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.animate-gradient {
+  animation: gradient 8s ease infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 8s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 10s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.animate-pulse-slower {
+  animation: pulse-slower 6s ease-in-out infinite;
+}
+
+.animate-spin-very-slow {
+  animation: spin-very-slow 20s linear infinite;
+}
