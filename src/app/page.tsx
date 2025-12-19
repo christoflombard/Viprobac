@@ -130,7 +130,7 @@ export default function Home() {
 
               {/* ViProGro Card */}
               {/* ViProGro Card (Non-interactive) */}
-              <ScrollReveal direction="right" delay={0.2} parallax className="group relative overflow-hidden rounded-3xl border border-viprogro/20 bg-viprogro/5 p-8 grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all cursor-default">
+              <ScrollReveal direction="right" delay={0.2} parallax className="group relative overflow-hidden rounded-3xl border border-viprogro/20 bg-viprogro/5 p-8 transition-all hover:border-viprogro/50 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] cursor-default">
                 <div className="absolute inset-0 bg-gradient-to-br from-viprogro/10 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                 <Sprout className="mb-6 h-12 w-12 text-viprogro" />
                 <h2 className="mb-4 text-3xl font-bold text-white">ViPro<span className="text-viprogro">Gro</span></h2>
@@ -138,8 +138,8 @@ export default function Home() {
                   Specialized disease control and plant health solutions. Protects crops and enhances yield with eco-friendly formulations.
                 </p>
                 {/* Disabled Button */}
-                <div className="opacity-50 pointer-events-none">
-                  <Button variant="viprogro" className="w-full cursor-not-allowed">
+                <div className="opacity-80 pointer-events-none">
+                  <Button variant="viprogro" className="w-full cursor-not-allowed opacity-80">
                     Coming Soon <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
