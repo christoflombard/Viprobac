@@ -34,9 +34,9 @@ export function Footer() {
                 <div>
                     <h3 className="font-bold mb-4">Contact</h3>
                     <ul className="space-y-2 text-sm text-gray-400">
-                        <li>info@viprobac.co.za</li>
-                        <li>+27 (0) 12 345 6789</li>
-                        <li>Pretoria, South Africa</li>
+                        <li>pieterl@viprobac.co.za</li>
+                        <li>+27 82 462 5184</li>
+                        <li>Cape Town, South Africa</li>
                     </ul>
                 </div>
             </div>

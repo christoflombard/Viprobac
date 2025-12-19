@@ -62,6 +62,7 @@ export function ShimmeringText({
                                         delay: delay,
                                     }}
                                     style={{ display: "inline-block" }}
+                                    className="mx-[1.5px]"
                                 >
                                     {char}
                                 </motion.span>

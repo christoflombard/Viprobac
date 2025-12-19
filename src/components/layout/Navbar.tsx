@@ -3,6 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 import { Button } from "@/components/ui/Button"
 import { cn } from "@/lib/utils"
 
@@ -50,8 +51,16 @@ export function Navbar() {
             )}
         >
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-                <Link href="/" className="text-2xl font-bold font-heading tracking-tighter">
-                    ViPro<span className="text-viprobac">Bac</span>
+                <Link href="/" className="flex items-center">
+                    <Image
+                        src="/viprobac-brand-logo.png"
+                        alt="ViProBac Logo"
+                        width={180}
+                        height={60}
+                        className="h-12 w-auto object-contain"
+                        priority
+                        unoptimized
+                    />
                 </Link>
 
                 {/* Desktop Nav */}

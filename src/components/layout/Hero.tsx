@@ -1,13 +1,13 @@
 "use client"
-import LiquidBackground from "@/components/LiquidBackground"
-
-import { cn } from "@/lib/utils"
-// import { Ripple } from "@/components/ui/Ripple" 
-import { WaterRipple } from "@/components/ui/WaterRipple"
+import dynamic from "next/dynamic"
 import { ShimmeringText } from "@/components/ui/ShimmeringText"
+import { cn } from "@/lib/utils"
+
+const LiquidBackground = dynamic(() => import("@/components/LiquidBackground"), { ssr: false })
+const WaterRipple = dynamic(() => import("@/components/ui/WaterRipple").then(mod => mod.WaterRipple), { ssr: false })
 
 interface HeroProps {
-    title: string
+    title: string | React.ReactNode
     subtitle: string
     children?: React.ReactNode
     className?: string
@@ -102,7 +102,7 @@ export function Hero({ title, subtitle, children, className, variant = "default"
             <div className="container relative z-10 px-4 md:px-6 text-center pt-32">
                 {/* Title with animated gradient */}
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading tracking-tighter mb-12 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading tracking-tighter mb-12 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+                    {typeof title === "string" ? (
                         <ShimmeringText
                             text={title}
                             duration={3}
@@ -111,7 +111,9 @@ export function Hero({ title, subtitle, children, className, variant = "default"
                             shimmeringColor={isViprogro ? "#4ade80" : "#38bdf8"}
                             className="drop-shadow-[0_0_8px_rgba(0,0,0,0.8)]"
                         />
-                    </h1>
+                    ) : (
+                        title
+                    )}
                 </h1>
 
                 {/* Subtitle with enhanced glassmorphism */}

@@ -4,6 +4,7 @@ import { Hero } from "@/components/layout/Hero"
 import { Button } from "@/components/ui/Button"
 import { ScrollReveal } from "@/components/ui/ScrollReveal"
 import { CheckCircle2, FileText, FlaskConical, ShieldCheck } from "lucide-react"
+import { ShimmeringText } from "@/components/ui/ShimmeringText"
 
 export default function ViProBacPage() {
     return (
@@ -12,7 +13,21 @@ export default function ViProBacPage() {
 
             <main className="flex-grow">
                 <Hero
-                    title="Transforming Water — Safely. Locally. Reliably."
+                    title={
+                        <div className="flex flex-col items-center justify-center gap-4">
+                            <ShimmeringText
+                                text="Transforming Water"
+                                duration={3}
+                                wave={true}
+                                color="#ffffff"
+                                shimmeringColor="#38bdf8"
+                                className="drop-shadow-[0_0_8px_rgba(0,0,0,0.8)]"
+                            />
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-viprobac to-white animate-gradient bg-[length:200%_auto] drop-shadow-[0_0_8px_rgba(0,0,0,0.8)]">
+                                Safely. Locally. Reliably.
+                            </span>
+                        </div>
+                    }
                     subtitle="ViProBac: The advanced copper & zinc-based solution for South Africa’s water-pollution crisis."
                     showRipple={true}
                     liquidEffect={true}

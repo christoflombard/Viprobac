@@ -7,21 +7,9 @@ import { User, Mail, Linkedin } from "lucide-react"
 const teamMembers = [
     {
         name: "Pieter",
-        role: "Founder & Lead Developer",
+        role: "Marketing & Operations Management",
         bio: "Driving the vision of ViProBac with a focus on sustainable water solutions.",
         image: null // Placeholder
-    },
-    {
-        name: "Taan",
-        role: "Technical Director",
-        bio: "Expert in chemical formulations and regulatory compliance.",
-        image: null
-    },
-    {
-        name: "Christof",
-        role: "Operations Manager",
-        bio: "Ensuring smooth production and distribution across all sectors.",
-        image: null
     }
 ]
 
@@ -39,9 +27,9 @@ export default function TeamPage() {
 
                 <section className="py-20">
                     <div className="container mx-auto px-4 md:px-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="flex flex-wrap justify-center gap-8">
                             {teamMembers.map((member, i) => (
-                                <ScrollReveal key={i} delay={i * 0.1} className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-8 hover:border-viprobac/50 transition-all">
+                                <ScrollReveal key={i} delay={i * 0.1} className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-8 hover:border-viprobac/50 transition-all w-full max-w-md">
                                     <div className="mb-6 w-32 h-32 rounded-full bg-white/10 mx-auto flex items-center justify-center overflow-hidden">
                                         {member.image ? (
                                             <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
